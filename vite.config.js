@@ -1,14 +1,7 @@
-// vite.config.js
-const { resolve } = require('path')
-const { defineConfig } = require('vite')
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
-module.exports = defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        notFound: resolve(__dirname, '404.html')
-      }
-    }
-  }
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()]
 })
