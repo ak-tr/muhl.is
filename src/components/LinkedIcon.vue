@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "IconImage",
+  name: "LinkedIcon",
   props: {
     fileName: String,
     altText: String,
