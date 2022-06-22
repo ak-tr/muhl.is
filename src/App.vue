@@ -1,32 +1,15 @@
-
 <template>
-  <div class="container">
-    <noscript>You need JavaScript to run this page...</noscript>
-    <div class="header">
-      <HeaderText text="muhl.is"/>
-    </div>
-    <div class="icons">
-      <IconImage fileName="github-icon.png" altText="GitHub Icon" />
-    </div>
-    <div class="content"></div>
-    <div class="footer">
-      <FooterText text="Created by akif!" />
-    </div>
-  </div>
+  <AppContainer />
 </template>
 
 <script>
-import HeaderText from "./components/Header.vue";
-import IconImage from "./components/Icon.vue";
-import FooterText from "./components/Footer.vue";
+import AppContainer from './components/AppContainer.vue'
 
-export default {
+export default { 
   name: "App",
   components: {
-    HeaderText,
-    IconImage,
-    FooterText,
-},
+    AppContainer,
+}
 }
 </script>
 
@@ -39,34 +22,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body , .container {
+html, body {
   height: 100vh;
   margin: 0;
 }
-
-.container {  
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 2.6fr 0.2fr;
-  gap: 10px 10px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "site-name site-name icons"
-    "content content content"
-    "footer footer footer";
-}
-
-.header { grid-area: site-name; }
-
-.icons { grid-area: icons; }
-
-.content { grid-area: content; }
-
-.footer { 
-  display: flex;
-  grid-area: footer; 
-  justify-content: center;
-  align-items: center;
-}
-
 </style>
