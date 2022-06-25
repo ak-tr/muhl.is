@@ -1,11 +1,16 @@
 <template>
-    <div class="content"></div>
+    <div class="content">
+      <TheCanvas />
+    </div>
 </template>
 
 <script>
+import TheCanvas from "./Canvas.vue";
+
 export default {
   name: "AppContent",
   components: {
+    TheCanvas
   }
 }
 </script>
