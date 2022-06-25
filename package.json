@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "gsap": "^3.10.4",
+    "pinia": "^2.0.14",
     "three": "^0.141.0",
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@types/three": "^0.141.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "vite": "^2.9.9"
   }
